@@ -45,6 +45,13 @@ public class AddressBook {
                 arrayDetails.add(info);
 //        sc.close();
         }
+        /**
+         *This method is used to edit the details in address book
+         */
+
+        public void display(){
+                System.out.println(arrayDetails);
+        }
 
         /**
          * create a method name as editDetails.
@@ -122,7 +129,6 @@ public class AddressBook {
                 }
 
         }
-
         /**
          * create a method name as deleteDetails
          * This method is used to delete the contact details
@@ -141,7 +147,7 @@ public class AddressBook {
 
                         if (arrayDetails.get(i).getFirstName().equals(confirmName)) {
                                 arrayDetails.remove(i);
-                                System.out.println("List After removing" + arrayDetails);
+                                System.out.println("List After removing"+arrayDetails);
 
                                 /**
                                  * if condition is false then print enter valid first name
@@ -154,7 +160,6 @@ public class AddressBook {
 
         /**
          * create a main method all program execute in main method
-         *
          * @param args no arguments
          */
         public static void main(String[] args) {
@@ -164,24 +169,28 @@ public class AddressBook {
                  */
                 AddressBook details = new AddressBook();
                 /**
-                 * calling method to object name . method name
-                 * object name.method name;
-                 * object=details
-                 * method=addDetails(),display()
+                 * declaration of variable
                  */
-                details.addDetails();
-
-                int i = 0;
-                while (i == 0) {
+                int  input;
+                int ans;
+                /**
+                 * create scanner class object
+                 */
+                Scanner scanner = new Scanner(System.in);
+                /**
+                 * using do while loop
+                 */
+                do {
                         /**
-                         * 1st print the welcome msg.
+                         * 1st print welcome msg
                          */
                         System.out.println("Welcome to Address Book Program");
                         System.out.println("What do you want to do: ");
                         System.out.println("1.Add details.\n2.Edit details.\n3.Delete Details.");
                         int choose = sc.nextInt();
                         /**
-                         * calling method in switch case
+                         * switch case is used
+                         * calling the method in switch case
                          */
                         switch (choose) {
                                 case 1:
@@ -194,11 +203,18 @@ public class AddressBook {
                                         details.deleteDetails();
                                         break;
                                 default:
-                                        i = 1;
-                                        System.out.println("Wrong option");
+                                        System.out.println("Invalid! option");
                                         break;
                         }
-                }
-
+                        /**
+                         * in switch case got the condition then break the statement and get the user input
+                         *
+                         */
+                        System.out.println("Do you want to continue?(0/1)");
+                        ans=scanner.nextInt();
+                        /**
+                         * if while condition is true then update in do conditions.
+                         */
+                }while(ans==1);
         }
 }
