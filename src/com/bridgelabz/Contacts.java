@@ -11,6 +11,29 @@ public class Contacts {
     private String firstName, lastName, address, city, state, email;
     private int zip;
     private long phoneNumber;
+
+    /**
+     * create a parameterized constructor
+     * @param firstName in address book
+     * @param lastName in address book
+     * @param address in address book
+     * @param city in address book
+     * @param state in address book
+     * @param zip in address book
+     * @param phoneNumber in address book
+     * @param email in address book
+     */
+    public Contacts (String firstName, String lastName, String address, String city, String state, int zip,
+                     Long phoneNumber, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
     /**
      * Used getter and setter to set and get the value.
      * Setter is used to set the value
@@ -20,7 +43,6 @@ public class Contacts {
     /**
      * crete a get method name as getFirstName
      * The get method returns the value of the variable
-     *
      * @return firstName
      */
     public String getFirstName() {
@@ -29,7 +51,6 @@ public class Contacts {
 
     /**
      * The set method takes a parameter (firstName) and assigns it to the firstName variable
-     *
      * @param firstName
      */
     public void setFirstName(String firstName) {
@@ -42,7 +63,6 @@ public class Contacts {
     /**
      * crete a get method name as getLastName
      * The get method returns the value of the variable
-     *
      * @return lastName
      */
     public String getLastName() {
@@ -51,7 +71,6 @@ public class Contacts {
 
     /**
      * The set method takes a parameter (lastName) and assigns it to the lastName variable
-     *
      * @param lastName
      */
     public void setLastName(String lastName) {
@@ -64,7 +83,6 @@ public class Contacts {
     /**
      * crete a get method name as getAddress
      * The get method returns the value of the variable
-     *
      * @return address
      */
     public String getAddress() {
@@ -73,7 +91,6 @@ public class Contacts {
 
     /**
      * The set method takes a parameter (address) and assigns it to the address variable
-     *
      * @param address
      */
     public void setAddress(String address) {
@@ -86,7 +103,6 @@ public class Contacts {
     /**
      * crete a get method name as getCity
      * The get method returns the value of the variable
-     *
      * @return city
      */
     public String getCity() {
@@ -95,7 +111,6 @@ public class Contacts {
 
     /**
      * The set method takes a parameter (city) and assigns it to the city variable
-     *
      * @param city
      */
     public void setCity(String city) {
@@ -108,7 +123,6 @@ public class Contacts {
     /**
      * crete a get method name as getState
      * The get method returns the value of the variable
-     *
      * @return state
      */
     public String getState() {
@@ -117,7 +131,6 @@ public class Contacts {
 
     /**
      * The set method takes a parameter (state) and assigns it to the state variable
-     *
      * @param state
      */
     public void setState(String state) {
@@ -130,7 +143,6 @@ public class Contacts {
     /**
      * crete a get method name as getEmail
      * The get method returns the value of the variable
-     *
      * @return email
      */
     public String getEmail() {
@@ -139,7 +151,6 @@ public class Contacts {
 
     /**
      * The set method takes a parameter (email) and assigns it to the email variable
-     *
      * @param email
      */
     public void setEmail(String email) {
@@ -152,7 +163,6 @@ public class Contacts {
     /**
      * crete a get method name as getZip
      * The get method returns the value of the variable
-     *
      * @return zip
      */
     public int getZip() {
@@ -161,7 +171,6 @@ public class Contacts {
 
     /**
      * The set method takes a parameter (zip) and assigns it to the zip variable
-     *
      * @param zip
      */
     public void setZip(int zip) {
@@ -174,7 +183,6 @@ public class Contacts {
     /**
      * crete a get method name as getPhoneNumber
      * The get method returns the value of the variable
-     *
      * @return phoneNumber
      */
     public long getPhoneNumber() {
@@ -183,7 +191,6 @@ public class Contacts {
 
     /**
      * The set method takes a parameter (phoneNumber) and assigns it to the phoneNumber variable
-     *
      * @param phoneNumber
      */
     public void setPhoneNumber(long phoneNumber) {
@@ -195,11 +202,12 @@ public class Contacts {
 
     /**
      * overriding the toString() method
-     *
      * @return firstname , lastName,Address,Zip,City,State,email,phone number.
+     *
      */
     public String toString() {
         return ("First name: " + firstName + "\n Last name: " + lastName + "\n Address: " + address + "\n city: " + city
-                + "\n state: " + state + "\n email: " + email + "\n zip: " + zip + "\n phone number:" + phoneNumber + "");
+                + "\n state: " +state + "\n email: " + email + "\n zip: " + zip + "\n phone number:" + phoneNumber + "");
     }
 }
+
